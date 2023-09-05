@@ -51,6 +51,8 @@ logLevel <- optional("INPUT_LOGLEVEL")
 if (!is.null(appFiles)) {
   appFiles <- unlist(strsplit(appFiles, ",", TRUE))
 }
+#  just those files need for force_curves
+appFiles  <-  c("app.r", "app_functions.r", "app_graphs.r", "app_UI.r", list.files(recursive = TRUE, pattern = "*CSV.csv"))
 
 # set up account
 cat("checking account info...")
