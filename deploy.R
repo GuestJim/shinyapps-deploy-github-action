@@ -51,8 +51,8 @@ logLevel <- optional("INPUT_LOGLEVEL")
 if (!is.null(appFiles)) {
   appFiles <- unlist(strsplit(appFiles, ",", TRUE))
 }
-#  just those files need for force_curves
-appFiles  <-  c("app.r", "app_functions.r", "app_graphs.r", "app_UI.r", list.files(recursive = TRUE, pattern = "*CSV.csv"))
+#  just those files need for TBOG Data
+appFiles  <-  c("app.r", list.files(pattern = "app_*"), list.files(recursive = TRUE, pattern = "*.csv.bz2"))
 
 # set up account
 cat("checking account info...")
